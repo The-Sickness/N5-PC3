@@ -1,6 +1,6 @@
 VERSION = 3
 PATCHLEVEL = 10
-SUBLEVEL = 61
+SUBLEVEL = 96
 EXTRAVERSION =
 NAME = TOSSUG Baby Fish
 
@@ -262,6 +262,7 @@ HOSTCXX      = $(CCACHE) g++
 else
 HOSTCC       = gcc
 HOSTCXX      = g++
+<<<<<<< HEAD
 endif
 ifdef CONFIG_WITH_GRAPHITE
 HOSTCFLAGS   = $(GRAPHITE) -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -std=gnu89 -floop-nest-optimize
@@ -270,6 +271,10 @@ else
 HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -std=gnu89 -floop-nest-optimize
 HOSTCXXFLAGS = -Ofast
 endif
+=======
+HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89
+HOSTCXXFLAGS = -O2
+>>>>>>> 9eb1266... Linux 3.10.61 to Linux 3.10.96
 
 # Decide whether to build built-in, modular, or both.
 # Normally, just do built-in.
